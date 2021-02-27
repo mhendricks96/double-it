@@ -11,18 +11,18 @@
 
 * Try to communicate issues with each other.
 * Communicate expectations clearly during daily stand-up.
-* Keep focus on project and solving problems insted of placing blame and bickering.
+* Keep focus on project and solving problems instead of placing blame and bickering.
 
 ## Communication Plan
 
 * Slack to communicate when not in class.
-* Meeting in Remo every class day.
-* Take some time to organize as a group for 15-30 minuresbefore meeting with Ryan/TA's.
+* Meeting in Remo table on every class day.
+* Take some time to organize as a group for 15-30 minutes before meeting with Ryan/TA's.
 * Listen, Listen, Listen.
 
 ## Work Plan
 
-* create detailed outlin on gitHub.
+* create detailed outline on gitHub.
 * communicate what we are working on.
 * Tools used will be GitHub Projects, VS Code, and Remo.
 
