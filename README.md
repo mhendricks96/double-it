@@ -19,6 +19,7 @@
 * Meeting in Remo table on every class day.
 * Take some time to organize as a group for 15-30 minutes before meeting with Ryan/TA's.
 * Listen, Listen, Listen.
+* Hold each other accountable
 
 ## Work Plan
 
@@ -33,3 +34,4 @@
 * Merging together to avoid conflicts and help communication.
 * 2 people minimum to approve a Pull request.
 * Pull from Dev branch together before every work session/class and meet back together for a merge party afterwards.
+
