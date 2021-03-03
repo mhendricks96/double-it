@@ -1,37 +1,18 @@
-# Project Planning
+# 201 Final Project
 
-## Group Members
+## Double It!
+We built a dynamic game where users can attempt to reach the Leaderboard by doubling score and quitting before losing everything.
 
-* Michael Hendricks
-* Michelle Pannosch
-* Alexander Williams
-* Garfield Grant
+### Authors: Michelle Pannosch, Alexander Williams, Garfield Grant, Michael Hendricks
 
-## Conflict Plan
+### Links and Resources
+* [submission PR](http://xyz.com)
+* Any Links you used as reference
+* [Project UML](img/uml.jpg) worked on by everyone 3/1
+* [Wireframe for main game page](img/game-screen.png) worked on by everyone 3/1
+* [Wireframe for Hight Score page](img/high-score-page.png) worked on by everyone 3/1
+* [Wireframe for About Me/Credits page](img/about-me-page.png) worked on by everyone 3/1
 
-* Try to communicate issues with each other.
-* Communicate expectations clearly during daily stand-up.
-* Keep focus on project and solving problems instead of placing blame and bickering.
-
-## Communication Plan
-
-* Slack to communicate when not in class.
-* Meeting in Remo table on every class day.
-* Take some time to organize as a group for 15-30 minutes before meeting with Ryan/TA's.
-* Listen, Listen, Listen.
-* Hold each other accountable
-
-## Work Plan
-
-* create detailed outline on gitHub.
-* communicate what we are working on.
-* Tools used will be GitHub Projects, VS Code, and Remo.
-
-## Git Process
-
-* Just about everything will live on GitHub.
-* All teammates will be contributors and have access.
-* Merging together to avoid conflicts and help communication.
-* 2 people minimum to approve a Pull request.
-* Pull from Dev branch together before every work session/class and meet back together for a merge party afterwards.
-
+### Reflections and Comments
+* Consider including the answers to your daily journal and submission questions here
+* This is also a good place to reflect on the tools and resources used and learned
