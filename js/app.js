@@ -1,7 +1,12 @@
 'use strict';
 let button = document.getElementById('start');
-var number = 7
+let doubleButton = document.getElementById('double');
+let closeButton = document.getElementById('close');
+var number = 5;
 //let score = number;
+
+// Place all global variables above this comment
+
 
 function double() {
   number *= 2;
@@ -16,22 +21,32 @@ function rng() {
 
 //rng(); // this functions returns a random number between 0 - 100
 // we need to replace the while loop with an event listener and larger game loop.
-while (number < 100) { //this while loop is for testing
+function gameLoop() {
+  // let game = true;
+  // while (game) { //this while loop is for testing
   let lucky = rng(); // this is where the important part begins
   if (lucky >= 40) {
     double();
   }
   if (lucky < 40) {
     number = 5;
+    // game = false;
     console.log('try again');
-    break;
+    // break;
   }
 }
+// }
 
-
-function clickHandle(){
-  double();
-  
+function doubleClick() {
+  gameLoop();
 }
+// Place all functions above this comment
 
-button.addEventListener('click',clickHandle)
+doubleButton.addEventListener('click', doubleClick);
+
+// function clickHandle() {
+//   double();
+
+// }
+
+// button.addEventListener('click', clickHandle);
