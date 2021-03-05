@@ -5,7 +5,7 @@ let doubleButton = document.getElementById('double');
 let closeButton = document.getElementById('close');
 var number = 5;
 let div1 = document.createElement('div');
-let gamePlay = document.getElementById('gamePlay');
+let play = document.getElementById('play');
 
 //Double it Function
 
@@ -40,7 +40,7 @@ function gameLoop() {
 // render game to index.html main
 function renderNumber(div){
   div.textContent = number;
-  gamePlay.appendChild(div);
+  play.appendChild(div);
 }
 
 //render function for writing to leader board
