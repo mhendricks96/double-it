@@ -1,5 +1,5 @@
-'use strict'
-// global variables 
+'use strict';
+// global variables
 //let button = document.getElementById('start');
 let doubleButton = document.getElementById('double');
 let closeButton = document.getElementById('close');
@@ -7,7 +7,7 @@ var number = 5;
 let div1 = document.createElement('div');
 let gamePlay = document.getElementById('gamePlay');
 
-//Double it Function  
+//Double it Function
 
 function double() {
   number *= 2;
@@ -48,7 +48,7 @@ function renderLeader(){
 
 }; 
 
-//event listeners 
+//event listeners
 function doubleClick() {
   gameLoop();
 
