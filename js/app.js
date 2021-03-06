@@ -65,7 +65,7 @@ function doubleClick() {
 }
 function closeGame(){
   renderLeader();
-  let userName = prompt('whats your name, quitter?');
+  let userName = prompt('Whats your name, quitter?');
 
   let newUserId = new UserId(userName, number );
   
