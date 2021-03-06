@@ -11,7 +11,7 @@ let play = document.getElementById('play');
 
 function double() {
   number *= 2;
-  console.log(number);
+  //console.log(number);
 }
 
 function rng() {
@@ -29,7 +29,7 @@ function gameLoop() {
   }
   if (lucky < 40) {
     number = 5;
-    console.log('You have Sucky Luck!!');
+    //console.log('You have Sucky Luck!!');
     div1.textContent = 'sorry, try again';
   }
 }
@@ -45,8 +45,17 @@ function renderNumber(div){
 
 //render function for writing to leader board
 function renderLeader(){
+  let userName = prompt('Good Job, Quitter!! Enter your name');
+  console.log('backed out');
+  // 1. need to stringify the data
+  let stringifiedScore = JSON.stringify(number);
+  //2. save to local storage
+  localStorage.setItem("score", stringifiedScore);
 
-}; 
+  let stringifiedUserName = JSON.stringify(userName);
+  localStorage.setItem("name", stringifiedUserName);
+
+}
 
 //event listeners
 function doubleClick() {
@@ -54,7 +63,8 @@ function doubleClick() {
 
 }
 function closeGame(){
-  'does something'
+  renderLeader();
+  number = 0;
 }
 
 // Place all functions above this comment
