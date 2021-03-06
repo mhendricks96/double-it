@@ -57,8 +57,7 @@ function doubleClick() {
 
 //controls "back out" button.
 function closeGame(){
-  renderLeader();
-  let userName = prompt('Whats your name, quitter?');
+   let userName = prompt('Whats your name, quitter?');
   let newUserId = new UserId(userName, number );
   let stringifiedArray = JSON.stringify(allUsersArray);
   localStorage.setItem('player', stringifiedArray);
