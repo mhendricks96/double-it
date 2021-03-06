@@ -30,7 +30,7 @@ function gameLoop() {
   }
   if (lucky < 40) {
     number = 5;
-    div1.textContent = 'Bad Choice! Start back at 0';
+    div1.textContent = 'Start back at 0';
   }
 }
 
