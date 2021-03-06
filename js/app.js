@@ -1,40 +1,40 @@
 'use strict';
-// global variables
-//let button = document.getElementById('start');
+// Global variables
 let doubleButton = document.getElementById('double');
 let closeButton = document.getElementById('close');
-var number = 5;
+let number = 5;
 let div1 = document.createElement('div');
 let play = document.getElementById('play');
 let allUsersArray = JSON.parse(localStorage.getItem('player')) || [];
 
-//Double it Function
+// Functions
 
+// doubles the current score.
 function double() {
   number *= 2;
-  //console.log(number);
 }
 
+// gets random number between 0-100.
 function rng() {
   let luck = Math.floor(Math.random() * (100 - 0) + 0);
   return luck;
 }
 
+// uses random number to decide if user wins or loses.
 function gameLoop() {
   let lucky = rng();
   if (lucky >= 40) {
     double();
     renderNumber(div1);
     div1.textContent = number;
-
   }
   if (lucky < 40) {
     number = 5;
-    //console.log('You have Sucky Luck!!');
-    div1.textContent = 'sorry, try again';
+    div1.textContent = 'Bad Choice! Start back at 0';
   }
 }
 
+// constructor to make each user who quits into an object.
 function UserId (name, score){
   this.name = name;
   this.score = score;
@@ -42,46 +42,29 @@ function UserId (name, score){
 }
 
 
-// render game to index.html main
+// renders current score to game screen.
 function renderNumber(div){
   div.textContent = number;
   play.appendChild(div);
 }
 
-//render function for writing to leader board
-function renderLeader(){
-  console.log('backed out');
-  console.log(allUsersArray);
+//Event listeners
 
-
-}
-
-
-
-//event listeners
+// controls "double it" button.
 function doubleClick() {
   gameLoop();
-
 }
-function closeGame(){
-  renderLeader();
-  let userName = prompt('whats your name, quitter?');
 
+//controls "back out" button.
+function closeGame(){
+  let userName = prompt('whats your name, quitter?');
   let newUserId = new UserId(userName, number );
-  
   let stringifiedArray = JSON.stringify(allUsersArray);
   localStorage.setItem('player', stringifiedArray);
-
-  
-  //let stringifiednewUser = JSON.stringify(newUserId);
-  //localStorage.setItem('Player', stringifiednewUser);
   window.location.href = '/board.html';
   number = 0;
 }
 
-
-// Place all functions above this comment
-
+// Event Listeners
 doubleButton.addEventListener('click', doubleClick);
-
 closeButton.addEventListener('click', closeGame);
