@@ -66,7 +66,7 @@ function gameLoopEasy() {
 
 
 // constructor to make each user who quits into an object.
-function UserId (name, score){
+function UserId(name, score) {
   this.name = name;
   this.score = score;
   allUsersArray.push(this);
@@ -74,7 +74,7 @@ function UserId (name, score){
 
 
 // renders current score to game screen.
-function renderNumber(div){
+function renderNumber(div) {
   div.textContent = number;
   play.appendChild(div);
 }
@@ -84,10 +84,10 @@ function renderNumber(div){
 
 // controls "double it" button.
 function doubleClick() {
-  if (difficultySelect.options[difficultySelect.selectedIndex].value === 'easy'){
+  if (difficultySelect.options[difficultySelect.selectedIndex].value === 'easy') {
     console.log('easy mode');
     gameLoopEasy();
-  }else if (difficultySelect.options[difficultySelect.selectedIndex].value === 'medium'){
+  } else if (difficultySelect.options[difficultySelect.selectedIndex].value === 'medium') {
     console.log('medium mode');
     gameLoopMedium();
   } else {
@@ -98,9 +98,9 @@ function doubleClick() {
 
 
 //controls "back out" button.
-function closeGame(){
+function closeGame() {
   let userName = prompt('Whats your name, quitter?');
-  let newUserId = new UserId(userName, number );
+  let newUserId = new UserId(userName, number);
   let stringifiedArray = JSON.stringify(allUsersArray);
   localStorage.setItem('player', stringifiedArray);
   window.location.href = '/board.html';
