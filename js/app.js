@@ -63,7 +63,7 @@ function gameLoopEasy() {
     div1.textContent = 'Start back at 0';
   }
 }
-// decides which difficulty loop to run
+// random game loop
 function gameLoopRandom() {
   let lucky = rng();
   let oddsArray = [50, 32, 15];
