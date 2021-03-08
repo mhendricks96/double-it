@@ -63,6 +63,24 @@ function gameLoopEasy() {
     div1.textContent = 'Start back at 0';
   }
 }
+// decides which difficulty loop to run
+function gameLoopRandom() {
+  let lucky = rng();
+  let oddsArray = [50, 32, 15];
+  let luckNumber = Math.floor(Math.random() * oddsArray.length);
+  if (lucky >= oddsArray[luckNumber]) {
+    double();
+    renderNumber(div1);
+    div1.textContent = number;
+  }
+  if (lucky < oddsArray[luckNumber]) {
+    number = 5;
+    div1.textContent = 'Start back at 0';
+  }
+  console.log(oddsArray[luckNumber]);
+}
+
+
 
 
 // constructor to make each user who quits into an object.
@@ -90,9 +108,12 @@ function doubleClick() {
   } else if (difficultySelect.options[difficultySelect.selectedIndex].value === 'medium') {
     console.log('medium mode');
     gameLoopMedium();
-  } else {
+  } else if (difficultySelect.options[difficultySelect.selectedIndex].value === 'hard'){
     console.log('hard mode');
     gameLoopHard();
+  } else {
+    console.log('ultimate mode');
+    gameLoopRandom();
   }
 }
 
