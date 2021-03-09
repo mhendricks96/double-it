@@ -5,7 +5,6 @@ body{
   height: 80vh;
 }
 
-
 main{
   background-image: url(/img/backdrop1.png);
   background-position: center;
@@ -20,9 +19,10 @@ h1{
   font-weight: bolder;
   font-size: xxx-large;
   margin-bottom: 15px;
+  padding-top: 24px;
   color: rgb(234, 241, 247);
 }
-#game{
+
   text-align: center;
   margin:auto;
   width: 50%;
