@@ -10,7 +10,7 @@ let allUsersArray = JSON.parse(localStorage.getItem('player')) || [];
 
 // Functions
 
-// doubles the current score.
+// doubles the current number.
 function double() {
   number *= 2;
 }
@@ -21,14 +21,25 @@ function rng() {
   return luck;
 }
 
+// appends current score to "Score div".
+function renderNumber(div) {
+  div.textContent = number;
+  play.appendChild(div);
+}
+
+//doubles user score and renders onto gamescreen
+function renderNewScore (){
+  double();
+  renderNumber(div1);
+  div1.textContent = number;
+}
+
 // uses random number to decide if user wins or loses.
 // game loop for hard mode
 function gameLoopHard() {
   let lucky = rng();
   if (lucky >= 50) {
-    double();
-    renderNumber(div1);
-    div1.textContent = number;
+    renderNewScore();
   }
   if (lucky < 50) {
     number = 5;
@@ -40,9 +51,7 @@ function gameLoopHard() {
 function gameLoopMedium() {
   let lucky = rng();
   if (lucky >= 32) {
-    double();
-    renderNumber(div1);
-    div1.textContent = number;
+    renderNewScore();
   }
   if (lucky < 32) {
     number = 5;
@@ -54,24 +63,21 @@ function gameLoopMedium() {
 function gameLoopEasy() {
   let lucky = rng();
   if (lucky >= 15) {
-    double();
-    renderNumber(div1);
-    div1.textContent = number;
+    renderNewScore();
   }
   if (lucky < 15) {
     number = 5;
     div1.textContent = 'Start back at 0';
   }
 }
+
 // random game loop
 function gameLoopRandom() {
   let lucky = rng();
   let oddsArray = [50, 32, 15];
   let luckNumber = Math.floor(Math.random() * oddsArray.length);
   if (lucky >= oddsArray[luckNumber]) {
-    double();
-    renderNumber(div1);
-    div1.textContent = number;
+    renderNewScore();
   }
   if (lucky < oddsArray[luckNumber]) {
     number = 5;
@@ -80,9 +86,6 @@ function gameLoopRandom() {
   console.log(oddsArray[luckNumber]);
 }
 
-
-
-
 // constructor to make each user who quits into an object.
 function UserId(name, score) {
   this.name = name;
@@ -90,15 +93,7 @@ function UserId(name, score) {
   allUsersArray.push(this);
 }
 
-
-// renders current score to game screen.
-function renderNumber(div) {
-  div.textContent = number;
-  play.appendChild(div);
-}
-
 //Event listeners
-
 
 // controls "double it" button.
 function doubleClick() {
@@ -116,7 +111,6 @@ function doubleClick() {
     gameLoopRandom();
   }
 }
-
 
 //controls "back out" button.
 function closeGame() {
