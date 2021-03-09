@@ -1,87 +1,133 @@
 'use strict';
-// global variables
-//let button = document.getElementById('start');
+// Global variables
 let doubleButton = document.getElementById('double');
 let closeButton = document.getElementById('close');
-var number = 5;
+let difficultySelect = document.getElementById('difficulty');
+let number = 5;
 let div1 = document.createElement('div');
 let play = document.getElementById('play');
 let allUsersArray = JSON.parse(localStorage.getItem('player')) || [];
 
-//Double it Function
+// Functions
 
+// doubles the current score.
 function double() {
   number *= 2;
-  //console.log(number);
 }
 
+// gets random number between 0-100.
 function rng() {
   let luck = Math.floor(Math.random() * (100 - 0) + 0);
   return luck;
 }
 
-function gameLoop() {
+// uses random number to decide if user wins or loses.
+// game loop for hard mode
+function gameLoopHard() {
   let lucky = rng();
-  if (lucky >= 40) {
+  if (lucky >= 50) {
     double();
     renderNumber(div1);
     div1.textContent = number;
-
   }
-  if (lucky < 40) {
+  if (lucky < 50) {
     number = 5;
-    //console.log('You have Sucky Luck!!');
-    div1.textContent = 'sorry, try again';
+    div1.textContent = 'Start back at 0';
   }
 }
 
-function UserId (name, score){
+//game loop for medium mode
+function gameLoopMedium() {
+  let lucky = rng();
+  if (lucky >= 32) {
+    double();
+    renderNumber(div1);
+    div1.textContent = number;
+  }
+  if (lucky < 32) {
+    number = 5;
+    div1.textContent = 'Start back at 0';
+  }
+}
+
+//game loop for easy mode
+function gameLoopEasy() {
+  let lucky = rng();
+  if (lucky >= 15) {
+    double();
+    renderNumber(div1);
+    div1.textContent = number;
+  }
+  if (lucky < 15) {
+    number = 5;
+    div1.textContent = 'Start back at 0';
+  }
+}
+// random game loop
+function gameLoopRandom() {
+  let lucky = rng();
+  let oddsArray = [50, 32, 15];
+  let luckNumber = Math.floor(Math.random() * oddsArray.length);
+  if (lucky >= oddsArray[luckNumber]) {
+    double();
+    renderNumber(div1);
+    div1.textContent = number;
+  }
+  if (lucky < oddsArray[luckNumber]) {
+    number = 5;
+    div1.textContent = 'Start back at 0';
+  }
+  console.log(oddsArray[luckNumber]);
+}
+
+
+
+
+// constructor to make each user who quits into an object.
+function UserId(name, score) {
   this.name = name;
   this.score = score;
   allUsersArray.push(this);
 }
 
 
-// render game to index.html main
-function renderNumber(div){
+// renders current score to game screen.
+function renderNumber(div) {
   div.textContent = number;
   play.appendChild(div);
 }
 
-//render function for writing to leader board
-function renderLeader(){
-  console.log('backed out');
-  console.log(allUsersArray);
+//Event listeners
 
 
-}
-
-
-
-//event listeners
+// controls "double it" button.
 function doubleClick() {
-  gameLoop();
-
+  if (difficultySelect.options[difficultySelect.selectedIndex].value === 'easy') {
+    console.log('easy mode');
+    gameLoopEasy();
+  } else if (difficultySelect.options[difficultySelect.selectedIndex].value === 'medium') {
+    console.log('medium mode');
+    gameLoopMedium();
+  } else if (difficultySelect.options[difficultySelect.selectedIndex].value === 'hard'){
+    console.log('hard mode');
+    gameLoopHard();
+  } else {
+    console.log('ultimate mode');
+    gameLoopRandom();
+  }
 }
-function closeGame(){
-  renderLeader();
-  let userName = prompt('whats your name, quitter?');
 
-  let newUserId = new UserId(userName, number );
-  
+
+//controls "back out" button.
+function closeGame() {
+  let userName = prompt('Whats your name, quitter?');
+  let newUserId = new UserId(userName, number);
   let stringifiedArray = JSON.stringify(allUsersArray);
   localStorage.setItem('player', stringifiedArray);
-
-  
-  //let stringifiednewUser = JSON.stringify(newUserId);
-  //localStorage.setItem('Player', stringifiednewUser);
   window.location.href = '/board.html';
   number = 0;
 }
 
-
-// Place all functions above this comment
-
+// Event Listeners
 doubleButton.addEventListener('click', doubleClick);
-
 closeButton.addEventListener('click', closeGame);
