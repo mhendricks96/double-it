@@ -23,12 +23,14 @@ h1{
   color: rgb(234, 241, 247);
 }
 
-#play{
   text-align: center;
-  margin-top: 150px;
-  margin-left: 400px;
-  display: inline-block;
-  color: white;
+  margin:auto;
+  width: 50%;
+  padding-top: 120px;
+  color: rgb(5, 4, 4);
+}
+#play {
+  font-size: 25px;
 }
 section{
   margin-top: 50px;
@@ -41,13 +43,21 @@ footer{
 }
 
 #rules{
-  font-size: 15px;
+  font-size: 25px;
   overflow: auto;
-  max-width: 200px;
+  max-width: 400px;
   color: white;
   background-color: black;
 }
 
-.button{
-  display: inline;
+#buttons {
+  margin:auto;
+  padding: 15px;
+  background-color: rgb(114, 36, 36);
+  height: 80px;
+  width: 380px;
+}
+#clickers{
+  margin: 35px;
+  padding-left: 25px;
 }

@@ -23,3 +23,22 @@ span:hover{
 background-color:white;
 }
 
+main{
+  border: 2px solid black;
+  margin-top: 15px;
+  margin:auto;
+  margin-top: 10%;
+  background-color: rgb(223, 217, 188);
+  align-items: center;
+  width: 250px;
+  padding: 15px ;
+}
+
+table, thead,tr,td{
+  border: 2px solid black;
+  margin-top: 15px;
+  background-color: rgb(188, 223, 211);
+  align-items: center;  
+  width: 250px;
+  padding:15px;
+} 
