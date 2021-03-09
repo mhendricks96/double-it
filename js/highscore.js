@@ -6,11 +6,13 @@ let retrievedPlayers = JSON.parse(localStorage.getItem('player'));
 // Functions
 
 //orders the high score array in descending order
+// function found on MDN
 function sortPlayers() {
   retrievedPlayers.sort(function (a, b) {
     return b.score - a.score;
   });
 }
+
 sortPlayers();
 
 // renders high score list by iterating through the users stored in local storage
