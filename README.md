@@ -58,7 +58,6 @@ We built a dynamic game where users can attempt to reach the Leaderboard by doub
 * Michelle created and worked on our presentation and slides
 * Alexander unsuccessfully worked on adding music to our web page before hitting some major roadblocks. To be continued.
 
-#### 3/8
+#### 3/9
 
 * Team members writing "about me" paragraphs and final touchups while preparing for presentations.
-
