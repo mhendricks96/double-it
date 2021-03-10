@@ -19,8 +19,21 @@ section{
   color: black;
   font-size: 3em;
 }
+span{
+  font-size: 35px;
+  display: inline-block;
+  margin-left: 30%;
+  word-spacing: normal;
+  background-color: white;
+}
 span:hover{
 background-color:white;
+font-size: 20px;
+border-radius: 14%;
+padding: 14px 25px;
+text-decoration: none;
+display: inline-block;
+
 }
 
 main{

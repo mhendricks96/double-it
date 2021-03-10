@@ -90,3 +90,14 @@ footer{
 #diff-label {
   color: white;
 }
+span{
+  background-color:green;
+  font-size: 16px;
+  color:white;
+  border-radius: 14%;
+  padding: 14px 25px;
+  margin-left: auto;
+  text-decoration: none;
+  display: inline-block;
+  
+}
