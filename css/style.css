@@ -1,0 +1,103 @@
+body{
+
+  background-image:url(https://media.giphy.com/media/10gJ9qSTW4mUFy/giphy.gif);
+   width: 80vw;
+  height: 80vh;
+}
+
+main{
+  background-image: url(/img/backdrop1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position-y: top;
+  padding-bottom: 50%;
+  
+}
+
+h1{
+  text-align: center;
+  font-weight: bolder;
+  font-size: xxx-large;
+  margin-bottom: 15px;
+  padding-top: 24px;
+  color: rgb(234, 241, 247);
+}
+#game{
+  text-align: center;
+  margin:auto;
+  width: 50%;
+  padding-top: 120px;
+  color: rgb(5, 4, 4);
+}
+#play {
+  font-size: 25px;
+}
+section{
+  margin-top: 50px;
+  height: 250px;
+  width: 250px;
+}
+
+footer{
+  margin-top: 50%;
+}
+
+#rules{
+  font-size: 25px;
+  overflow: auto;
+  max-width: 400px;
+  color: white;
+  background-color: black;
+}
+
+#buttons {
+  margin:auto;
+  padding: 15px;
+  background-color: rgb(114, 36, 36);
+  height: 120px;
+  width: 380px;
+}
+#clickers{
+  margin: 35px;
+  padding-left: 25px;
+}
+
+.cool-buttons {
+  box-shadow:inset 0px 1px 0px 0px #a4e271;
+	background:linear-gradient(to bottom, #517009 5%, #77a809 100%);
+	background-color:#517009;
+	border-radius:6px;
+	border:1px solid #74b807;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:6px 24px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #528009;
+}
+.cool-buttons:hover {
+	background:linear-gradient(to bottom, #77a809 5%, #517009 100%);
+	background-color:#77a809;
+}
+.cool-buttons:active {
+	position:relative;
+	top:1px;
+}
+
+#diff-label {
+  color: white;
+}
+span{
+  background-color:green;
+  font-size: 16px;
+  color:white;
+  border-radius: 14%;
+  padding: 14px 25px;
+  margin-left: auto;
+  text-decoration: none;
+  display: inline-block;
+  
+}

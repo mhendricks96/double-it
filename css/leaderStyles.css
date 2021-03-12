@@ -1,0 +1,57 @@
+body{
+  background-image: url(https://media.giphy.com/media/SIPIe590rx6iA/giphy.gif);
+  
+}
+
+h1{
+  text-align: center;
+  font-weight: bolder;
+  font-size: 5em;
+  margin-bottom: 25px;
+  margin-top: 15px;
+  padding:15px
+}
+section{
+  word-spacing: 25px;
+  text-align: center;
+  text-decoration:wavy;
+  font-weight: bolder;  
+  color: black;
+  font-size: 3em;
+}
+span{
+  font-size: 35px;
+  display: inline-block;
+  margin-left: 30%;
+  word-spacing: normal;
+  background-color: white;
+}
+span:hover{
+background-color:white;
+font-size: 20px;
+border-radius: 14%;
+padding: 14px 25px;
+text-decoration: none;
+display: inline-block;
+
+}
+
+main{
+  border: 2px solid black;
+  margin-top: 15px;
+  margin:auto;
+  margin-top: 10%;
+  background-color: rgb(223, 217, 188);
+  align-items: center;
+  width: 250px;
+  padding: 15px ;
+}
+
+table, thead,tr,td{
+  border: 2px solid black;
+  margin-top: 15px;
+  background-color: rgb(188, 223, 211);
+  align-items: center;  
+  width: 250px;
+  padding:15px;
+} 
